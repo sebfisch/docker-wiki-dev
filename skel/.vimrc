@@ -50,7 +50,7 @@ let g:vimwiki_list = [{
   \ 'ext': '.md',
 \}]
 
-set pastetoggle <leader>p
+set pastetoggle=<leader>p
 
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
