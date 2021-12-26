@@ -26,5 +26,4 @@ USER $USER
 
 RUN vim +PlugInstall +qall && \
 sed -i 's/delek/monokai_pro/g' $HOME/.vimrc && \
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm && \
-$HOME/.tmux/plugins/tpm/bin/install_plugins
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm # && $HOME/.tmux/plugins/tpm/bin/install_plugins
