@@ -14,8 +14,9 @@ ENV GID=$GID
 
 ENV EDITOR=vim
 
-RUN sed -i -e 's/main/testing/g' /etc/apk/repositories && \
+RUN sed -i -e 's/v[[:digit:]]\..*\//edge\//g' /etc/apk/repositories && \
 apk --no-cache add openssh tzdata git vim tmux bash zsh curl fzf ripgrep perl hugo && \
+apk upgrade musl && \
 curl -sfL git.io/antibody | sh -s - -b /usr/local/bin && \
 sed -i 's/bash$/zsh/g' /etc/passwd && \
 addgroup --gid $GID $GROUP && \
